@@ -368,7 +368,6 @@ def verify_recaptcha(request):
             timeout=10
         )
         result = response.json()
-        print("reCAPTCHA result:", result)
         return result.get("success", False)
     except requests.RequestException as e:
         print("reCAPTCHA request error:", str(e))
